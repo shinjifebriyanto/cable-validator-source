@@ -66,10 +66,10 @@ Seksi ini menampilkan desain papan sirkuit cetak (*Printed Circuit Board*) yang 
   </tr>
   <tr>
     <td align="center">
-      <img src="Cable-Validator-Device/Cable-Validator-PCB-Top.jpg" alt="PCB Top View" width="100%">
+      <img alt="Cable-Validator-PCB-Top" src="https://github.com/user-attachments/assets/5aa5bd52-d2bd-4239-8569-bc9866fc5a41" width="100%">
     </td>
     <td align="center">
-      <img src="Cable-Validator-Device/Cable-Validator-PCB-Bottom.jpg" alt="PCB Bottom View" width="100%">
+      <img alt="Cable-Validator-PCB-Bottom" src="https://github.com/user-attachments/assets/d67cd7f0-1b65-4771-b2ae-2fd1b8e2c23b" width="100%">
     </td>
   </tr>
 </table>
@@ -81,7 +81,7 @@ Seksi ini menampilkan desain papan sirkuit cetak (*Printed Circuit Board*) yang 
 Diagram skematik ini mengilustrasikan koneksi logis lengkap dari semua komponen elektronik dalam sistem.
 
 <p align="center">
-  <img src="Cable-Validator-Device/Cable-Validator-Schematic.jpg" alt="Diagram Skematik Cable Validator" width="900">
+  <img alt="Cable-Validator-Schematic" src="https://github.com/user-attachments/assets/21f80cfc-e7b3-42d4-9e74-b0ecda771b35" width="900">
 </p>
 
 **Deskripsi Singkat Skematik:** Diagram ini mencakup sub-sistem vital: manajemen daya (LM317 Adjustable Current Source & TP4056 Battery Charger), sirkuit sensing (Sense/Force connectors), pengolah data (ESP32-C3 Supermini), dan periferal pendukung (ADS1115 ADC, Buzzer, LED Indikator).
