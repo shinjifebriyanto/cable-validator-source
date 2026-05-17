@@ -91,7 +91,7 @@ Diagram skematik ini mengilustrasikan koneksi logis lengkap dari semua komponen 
 Klik tombol di bawah ini untuk melihat rancangan jalur PCB secara interaktif (bisa digeser, di-zoom, dan melihat setiap lapisan tembaga 2D/3D) langsung dari *browser*:
 
 <p align="center">
-  👉 <b><a href="MASUKKAN_LINK_SHARE_DANNIE_CC_DI_SINI" target="_blank">Buka Interactive Gerber Viewer ➔</a></b>
+  👉 <b><a href="https://gerber.tools/gerber-viewer?share=OgPStDug2Ml4qV2saSNh5f87yafzjRKcJO4062qk7ScQVj1J" target="_blank">Buka Interactive Gerber Viewer ➔</a></b>
 </p>
 
 ---
