@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="?attr/colorSurface">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Panduan Standar"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-black"
+            android:textColor="@color/brand_blue"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Panduan standar ukuran fisik dan batas hambatan kabel (Tembaga Murni)."
+            android:textSize="13sp"
+            android:lineSpacingMultiplier="1.2"
+            android:textColor="?attr/colorOnSurfaceVariant"
+            android:layout_marginBottom="24dp" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="0dp"
+            app:strokeWidth="0dp"
+            app:cardBackgroundColor="@color/blue_icon_bg">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="12dp">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_info"
+                        app:tint="@color/brand_blue"
+                        android:layout_marginEnd="12dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="METODE VALIDASI"
+                        android:textStyle="bold"
+                        android:textSize="14sp"
+                        android:letterSpacing="0.1"
+                        android:textColor="@color/brand_blue" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Validasi didasarkan pada standar International Annealed Copper Standard (IACS) menggunakan nilai resistivitas Tembaga Murni."
+                    android:textSize="13sp"
+                    android:lineSpacingMultiplier="1.2"
+                    android:textColor="?attr/colorOnSurfaceVariant"
+                    android:layout_marginBottom="12dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#10000000"
+                    android:padding="12dp"
+                    android:layout_marginBottom="12dp"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ρ = 0.017241 Ω·mm²/m"
+                        android:fontFamily="monospace"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="?attr/colorOnSurface" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="top">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Ini adalah nilai hambatan jenis Tembaga Murni. Jika hasil ukur kabel melampaui batas toleransi angka ini, berarti bahan konduktor tersebut tidak murni (campuran)."
+                        android:textSize="13sp"
+                        android:lineSpacingMultiplier="1.2"
+                        android:textColor="?attr/colorOnSurfaceVariant" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1. Standar SNI / IEC (Metrik)"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="?attr/colorOnSurface"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Standar umum di Indonesia (SNI 04-6629.3 / IEC 60227) untuk instalasi listrik rumah (kabel NYA/NYM). Ukuran kabel ditentukan berdasarkan luas penampang (mm²)."
+            android:textSize="13sp"
+            android:lineSpacingMultiplier="1.2"
+            android:textColor="?attr/colorOnSurfaceVariant"
+            android:layout_marginBottom="16dp" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="0dp"
+            app:strokeWidth="1dp"
+            app:strokeColor="@color/brand_blue"
+            app:cardBackgroundColor="@color/blue_card_trans">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:stretchColumns="1">
+
+                <TableRow android:layout_marginBottom="16dp">
+                    <TextView
+                        android:text="UKURAN KABEL"
+                        android:textStyle="bold"
+                        android:textSize="11sp"
+                        android:letterSpacing="0.05"
+                        android:textColor="@color/brand_blue" />
+                    <TextView
+                        android:text="DIAMETER INTI"
+                        android:textStyle="bold"
+                        android:textSize="11sp"
+                        android:gravity="center"
+                        android:letterSpacing="0.05"
+                        android:textColor="@color/brand_blue" />
+                    <TextView
+                        android:text="BATAS HAMBATAN"
+                        android:textStyle="bold"
+                        android:textSize="11sp"
+                        android:letterSpacing="0.05"
+                        android:gravity="end"
+                        android:textColor="@color/brand_blue" />
+                </TableRow>
+
+                <TableRow android:layout_marginBottom="10dp">
+                    <TextView android:text="0.75 mm²" android:textSize="14sp" android:textColor="?attr/colorOnSurface" />
+                    <TextView android:text="Ø 0.98 mm" android:textSize="12sp" android:gravity="center" android:textColor="?attr/colorOnSurfaceVariant" />
+                    <TextView android:text="0.0260 Ω/m" android:textSize="14sp" android:fontFamily="monospace" android:gravity="end" android:textColor="?attr/colorOnSurface" />
+                </TableRow>
+
+                <TableRow android:layout_marginBottom="10dp">
+                    <TextView android:text="1.0 mm²" android:textSize="14sp" android:textColor="?attr/colorOnSurface" />
+                    <TextView android:text="Ø 1.13 mm" android:textSize="12sp" android:gravity="center" android:textColor="?attr/colorOnSurfaceVariant" />
+                    <TextView android:text="0.0181 Ω/m" android:textSize="14sp" android:fontFamily="monospace" android:gravity="end" android:textColor="?attr/colorOnSurface" />
+                </TableRow>
+
+                <TableRow android:layout_marginBottom="10dp">
+                    <TextView android:text="1.5 mm²" android:textSize="14sp" android:textColor="?attr/colorOnSurface" />
+                    <TextView android:text="Ø 1.38 mm" android:textSize="12sp" android:gravity="center" android:textColor="?attr/colorOnSurfaceVariant" />
+                    <TextView android:text="0.0121 Ω/m" android:textSize="14sp" android:fontFamily="monospace" android:gravity="end" android:textColor="?attr/colorOnSurface" />
+                </TableRow>
+
+                <TableRow android:layout_marginBottom="10dp">
+                    <TextView android:text="2.5 mm²" android:textSize="14sp" android:textColor="?attr/colorOnSurface" />
+                    <TextView android:text="Ø 1.78 mm" android:textSize="12sp" android:gravity="center" android:textColor="?attr/colorOnSurfaceVariant" />
+                    <TextView android:text="0.0074 Ω/m" android:textSize="14sp" android:fontFamily="monospace" android:gravity="end" android:textColor="?attr/colorOnSurface" />
+                </TableRow>
+
+                <TableRow android:layout_marginBottom="10dp">
+                    <TextView android:text="4.0 mm²" android:textSize="14sp" android:textColor="?attr/colorOnSurface" />
+                    <TextView android:text="Ø 2.25 mm" android:textSize="12sp" android:gravity="center" android:textColor="?attr/colorOnSurfaceVariant" />
+                    <TextView android:text="0.0046 Ω/m" android:textSize="14sp" android:fontFamily="monospace" android:gravity="end" android:textColor="?attr/colorOnSurface" />
+                </TableRow>
+
+                <TableRow>
+                    <TextView android:text="6.0 mm²" android:textSize="14sp" android:textColor="?attr/colorOnSurface" />
+                    <TextView android:text="Ø 2.76 mm" android:textSize="12sp" android:gravity="center" android:textColor="?attr/colorOnSurfaceVariant" />
+                    <TextView android:text="0.0031 Ω/m" android:textSize="14sp" android:fontFamily="monospace" android:gravity="end" android:textColor="?attr/colorOnSurface" />
+                </TableRow>
+
+            </TableLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2. Standar ASTM (AWG)"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="?attr/colorOnSurface"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Standar Amerika (ASTM B 258) yang umum digunakan pada kabel elektronik dan audio. Semakin KECIL nomor AWG, semakin BESAR ukuran kabelnya."
+            android:textSize="13sp"
+            android:lineSpacingMultiplier="1.2"
+            android:textColor="?attr/colorOnSurfaceVariant"
+            android:layout_marginBottom="16dp" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="0dp"
+            app:strokeWidth="1dp"
+            app:strokeColor="@color/brand_blue"
+            app:cardBackgroundColor="@color/blue_card_trans">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:stretchColumns="1">
+
+                <TableRow android:layout_marginBottom="16dp">
+                    <TextView
+                        android:text="NOMOR AWG"
+                        android:textStyle="bold"
+                        android:textSize="11sp"
+                        android:letterSpacing="0.05"
+                        android:textColor="@color/brand_blue" />
+                    <TextView
+                        android:text="DIAMETER INTI"
+                        android:textStyle="bold"
+                        android:textSize="11sp"
+                        android:gravity="center"
+                        android:letterSpacing="0.05"
+                        android:textColor="@color/brand_blue" />
+                    <TextView
+                        android:text="BATAS HAMBATAN"
+                        android:textStyle="bold"
+                        android:textSize="11sp"
+                        android:letterSpacing="0.05"
+                        android:gravity="end"
+                        android:textColor="@color/brand_blue" />
+                </TableRow>
+
+                <TableRow android:layout_marginBottom="10dp">
+                    <TextView android:text="AWG 24" android:textSize="14sp" android:textColor="?attr/colorOnSurface" />
+                    <TextView android:text="Ø 0.51 mm" android:textSize="12sp" android:gravity="center" android:textColor="?attr/colorOnSurfaceVariant" />
+                    <TextView android:text="0.0841 Ω/m" android:textSize="14sp" android:fontFamily="monospace" android:gravity="end" android:textColor="?attr/colorOnSurface" />
+                </TableRow>
+
+                <TableRow android:layout_marginBottom="10dp">
+                    <TextView android:text="AWG 22" android:textSize="14sp" android:textColor="?attr/colorOnSurface" />
+                    <TextView android:text="Ø 0.64 mm" android:textSize="12sp" android:gravity="center" android:textColor="?attr/colorOnSurfaceVariant" />
+                    <TextView android:text="0.0532 Ω/m" android:textSize="14sp" android:fontFamily="monospace" android:gravity="end" android:textColor="?attr/colorOnSurface" />
+                </TableRow>
+
+                <TableRow android:layout_marginBottom="10dp">
+                    <TextView android:text="AWG 20" android:textSize="14sp" android:textColor="?attr/colorOnSurface" />
+                    <TextView android:text="Ø 0.81 mm" android:textSize="12sp" android:gravity="center" android:textColor="?attr/colorOnSurfaceVariant" />
+                    <TextView android:text="0.0332 Ω/m" android:textSize="14sp" android:fontFamily="monospace" android:gravity="end" android:textColor="?attr/colorOnSurface" />
+                </TableRow>
+
+                <TableRow android:layout_marginBottom="10dp">
+                    <TextView android:text="AWG 18" android:textSize="14sp" android:textColor="?attr/colorOnSurface" />
+                    <TextView android:text="Ø 1.02 mm" android:textSize="12sp" android:gravity="center" android:textColor="?attr/colorOnSurfaceVariant" />
+                    <TextView android:text="0.0210 Ω/m" android:textSize="14sp" android:fontFamily="monospace" android:gravity="end" android:textColor="?attr/colorOnSurface" />
+                </TableRow>
+
+                <TableRow android:layout_marginBottom="10dp">
+                    <TextView android:text="AWG 16" android:textSize="14sp" android:textColor="?attr/colorOnSurface" />
+                    <TextView android:text="Ø 1.29 mm" android:textSize="12sp" android:gravity="center" android:textColor="?attr/colorOnSurfaceVariant" />
+                    <TextView android:text="0.0132 Ω/m" android:textSize="14sp" android:fontFamily="monospace" android:gravity="end" android:textColor="?attr/colorOnSurface" />
+                </TableRow>
+
+                <TableRow android:layout_marginBottom="10dp">
+                    <TextView android:text="AWG 14" android:textSize="14sp" android:textColor="?attr/colorOnSurface" />
+                    <TextView android:text="Ø 1.63 mm" android:textSize="12sp" android:gravity="center" android:textColor="?attr/colorOnSurfaceVariant" />
+                    <TextView android:text="0.0083 Ω/m" android:textSize="14sp" android:fontFamily="monospace" android:gravity="end" android:textColor="?attr/colorOnSurface" />
+                </TableRow>
+
+                <TableRow android:layout_marginBottom="10dp">
+                    <TextView android:text="AWG 12" android:textSize="14sp" android:textColor="?attr/colorOnSurface" />
+                    <TextView android:text="Ø 2.05 mm" android:textSize="12sp" android:gravity="center" android:textColor="?attr/colorOnSurfaceVariant" />
+                    <TextView android:text="0.0052 Ω/m" android:textSize="14sp" android:fontFamily="monospace" android:gravity="end" android:textColor="?attr/colorOnSurface" />
+                </TableRow>
+
+                <TableRow>
+                    <TextView android:text="AWG 10" android:textSize="14sp" android:textColor="?attr/colorOnSurface" />
+                    <TextView android:text="Ø 2.59 mm" android:textSize="12sp" android:gravity="center" android:textColor="?attr/colorOnSurfaceVariant" />
+                    <TextView android:text="0.0033 Ω/m" android:textSize="14sp" android:fontFamily="monospace" android:gravity="end" android:textColor="?attr/colorOnSurface" />
+                </TableRow>
+
+            </TableLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CABLE VALIDATOR APP - VERSI 1.0.0"
+                android:textSize="12sp"
+                android:textColor="?attr/colorOnSurfaceVariant" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2026 © SHINJI FEBRIYANTO"
+                android:textSize="12sp"
+                android:layout_marginTop="2dp"
+                android:textColor="?attr/colorOnSurfaceVariant" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

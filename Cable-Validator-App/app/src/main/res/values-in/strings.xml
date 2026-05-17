@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Cable Validator</string>
+    <string name="tabDevice">Perangkat</string>
+    <string name="tabConfiguration">Konfigurasi</string>
+    <string name="tabValidation">Validasi</string>
+    <string name="tabHistory">Riwayat</string>
+    <string name="tabGuide">Panduan</string>
+    <string name="titleDeviceStatus">STATUS PERANGKAT</string>
+    <string name="tvStatusNotConnected">Belum Terhubung</string>
+    <string name="tvStatusConnected">Terhubung</string>
+    <string name="tvStatusNotConnectedSub">Sambungkan ke Perangkat terlebih dahulu</string>
+    <string name="btnStartScan">Mulai Pindai Perangkat</string>
+    <string name="btnStopScan">Hentikan Pemindaian Perangkat</string>
+    <string name="titleDeviceCount">Perangkat Ditemukan</string>
+    <string name="tvDeviceCount">Ditemukan</string>
+    <string name="tvDeviceCountSub">Mencari...</string>
+    <string name="btnConnect">Menghubungkan</string>
+    <string name="btnDisconnect">Putus Koneksi</string>
+    <string name="titleSavedConfiguration">KONFIGURASI TERSIMPAN</string>
+    <string name="tvLastUpdate">Data yang Tersimpan dan Aktif dari Perangkat</string>
+    <string name="tvSendingData">Mengirim Data...</string>
+    <string name="tvPleaseWait">Mohon Tunggu...</string>
+    <string name="tvRead">Membaca...</string>
+    <string name="tvSync">Sinkronisasi...</string>
+    <string name="etLengthError">Wajib diisi!</string>
+</resources>

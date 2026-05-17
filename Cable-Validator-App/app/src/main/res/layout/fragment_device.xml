@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="?attr/colorSurface">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardStatusDevice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="0dp"
+        app:strokeWidth="1dp"
+        app:strokeColor="@color/brand_blue"
+        app:cardBackgroundColor="@color/blue_card_trans">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="8dp">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@android:drawable/stat_sys_data_bluetooth"
+                    app:tint="@color/brand_blue"
+                    android:layout_marginEnd="8dp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="STATUS PERANGKAT"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.1"
+                    android:textColor="@color/brand_blue" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvStatusMain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Belum Terhubung"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="?attr/colorOnSurface"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:id="@+id/tvStatusSub"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hubungkan ke Perangkat terlebih dahulu"
+                android:textSize="12sp"
+                android:textColor="?attr/colorOnSurfaceVariant" />
+
+            <LinearLayout
+                android:id="@+id/layoutActionConnected"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="end"
+                android:layout_marginTop="12dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tvRssiLive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="- dBm"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/brand_blue"
+                    android:layout_marginEnd="12dp"
+                    android:layout_gravity="center_vertical" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnDisconnect"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:text="Putus Koneksi"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    app:cornerRadius="18dp"
+                    android:backgroundTint="#D32F2F"
+                    android:textColor="@android:color/white"
+                    app:rippleColor="#FFCDD2" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnScan"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="Scan Perangkat"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:cornerRadius="12dp"
+        android:backgroundTint="@color/brand_blue"
+        android:textColor="@color/white"
+        android:layout_marginBottom="16dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="8dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Perangkat Ditemukan"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:textColor="?attr/colorOnSurface" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="8dp"
+            app:cardBackgroundColor="@color/blue_icon_bg"
+            app:strokeWidth="0dp"
+            app:cardElevation="0dp">
+
+            <TextView
+                android:id="@+id/tvDeviceCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0 Ditemukan"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="@color/brand_blue"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="4dp" />
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvDeviceList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false" />
+
+</LinearLayout>

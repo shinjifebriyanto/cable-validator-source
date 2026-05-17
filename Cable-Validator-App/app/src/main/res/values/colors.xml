@@ -1,0 +1,13 @@
+<resources>
+    <color name="brand_blue">#2196F3</color>
+    <color name="blue_card_trans">#152196F3</color>
+    <color name="blue_icon_bg">#332196F3</color>
+    <color name="white">#FFFFFF</color>
+    <color name="status_lulus_dark">#2E7D32</color>
+    <color name="status_gagal_dark">#C62828</color>
+    <color name="status_lulus_bg">#262E7D32</color>
+    <color name="status_gagal_bg">#26C62828</color>
+    <color name="bg_detail_card">#F5F5F5</color>
+    <color name="btn_cancel_bg">#EEEEEE</color>
+    <color name="black">#000000</color>
+</resources>

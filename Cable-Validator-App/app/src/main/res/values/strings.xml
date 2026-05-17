@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Cable Validator</string>
+    <string name="tabDevice">Device</string>
+    <string name="tabConfiguration">Configuration</string>
+    <string name="tabValidation">Validation</string>
+    <string name="tabHistory">History</string>
+    <string name="tabGuide">Guide</string>
+    <string name="titleDeviceStatus">DEVICE STATUS</string>
+    <string name="tvStatusNotConnected">Not Connected</string>
+    <string name="tvStatusConnected">Connected</string>
+    <string name="tvStatusNotConnectedSub">Connect to Device first</string>
+    <string name="btnStartScan">Start Scanning Devices</string>
+    <string name="btnStopScan">Stop Device Scanning</string>
+    <string name="titleDeviceCount">Device Found</string>
+    <string name="tvDeviceCount">Found</string>
+    <string name="tvDeviceCountSub">Look for...</string>
+    <string name="btnConnect">Connect</string>
+    <string name="btnDisconnect">Disconnect</string>
+    <string name="titleSavedConfiguration">SAVED CONFIGURATION</string>
+    <string name="tvLastUpdate">Stored and Active Data from the Device</string>
+    <string name="tvSendingData">Sending Data...</string>
+    <string name="tvPleaseWait">Please Wait...</string>
+    <string name="tvRead">Read...</string>
+    <string name="tvSync">Synchronization...</string>
+    <string name="etLengthError">Required!</string>
+</resources>

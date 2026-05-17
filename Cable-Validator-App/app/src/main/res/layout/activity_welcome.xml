@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="?attr/colorSurface">
+
+    <ImageView
+        android:layout_width="230px"
+        android:layout_height="230px"
+        android:src="@drawable/cable_validator_image"
+        android:layout_marginTop="50dp"
+        android:layout_gravity="center" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CABLE VALIDATOR APP"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="24dp"
+        android:textAlignment="center"
+        android:textColor="?attr/colorOnSurface" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="0dp"
+        app:strokeWidth="1dp"
+        app:strokeColor="#E0E0E0"
+        app:cardBackgroundColor="#0A000000">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/tvTitleLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Lokasi"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="#9E9E9E"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:id="@+id/tvDescLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pengguna harus mengizinkan lokasi untuk mencari perangkat sekitar."
+                android:textSize="13sp"
+                android:layout_marginBottom="12dp"
+                android:textColor="#9E9E9E" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnLocation"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Belum Diizinkan"
+                android:textColor="@android:color/white"
+                app:cornerRadius="12dp"
+                android:backgroundTint="@color/brand_blue" />
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardBluetooth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="0dp"
+        app:strokeWidth="1dp"
+        app:strokeColor="#E0E0E0"
+        app:cardBackgroundColor="#0A000000">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/tvTitleBluetooth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Perangkat Terdekat"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="#9E9E9E"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:id="@+id/tvDescBluetooth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pengguna harus mengizinkan perangkat terdekat untuk koneksi aplikasi dengan perangkat."
+                android:textSize="13sp"
+                android:layout_marginBottom="12dp"
+                android:textColor="#9E9E9E" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnBluetooth"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Belum Diizinkan"
+                android:textColor="#9E9E9E"
+                app:cornerRadius="12dp"
+                android:enabled="false"
+                android:backgroundTint="#E0E0E0" />
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnStartApp"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="Lanjutkan ke Beranda"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#9E9E9E"
+        android:backgroundTint="#E0E0E0"
+        app:cornerRadius="16dp"
+        android:enabled="false"
+        android:layout_marginBottom="8dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CABLE VALIDATOR APP - VERSI 1.0.0"
+            android:textSize="12sp"
+            android:textColor="?attr/colorOnSurfaceVariant" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2026 © SHINJI FEBRIYANTO"
+            android:textSize="12sp"
+            android:layout_marginTop="2dp"
+            android:textColor="?attr/colorOnSurfaceVariant" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,16 @@
+# Mengabaikan file Build Android Studio
+Cable-Validator-App/.gradle/
+Cable-Validator-App/build/
+Cable-Validator-App/app/build/
+Cable-Validator-App/.idea/
+Cable-Validator-App/local.properties
+*.apk
+*.aar
+
+# Mengabaikan file Build Hardware (Arduino/PlatformIO)
+Cable-Validator-Device/CBV-SF26X/.pio/
+Cable-Validator-Device/CBV-SF26X/.vscode/
+Cable-Validator-Device/CBV-SF26X/build/
+*.hex
+*.bin
+*.elf

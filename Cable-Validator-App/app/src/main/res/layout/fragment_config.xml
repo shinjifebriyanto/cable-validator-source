@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="?attr/colorSurface">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardCurrentStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="0dp"
+            app:strokeWidth="1dp"
+            app:strokeColor="@color/brand_blue"
+            app:cardBackgroundColor="@color/blue_card_trans">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="8dp">
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:src="@drawable/ic_cpu"
+                        app:tint="@color/brand_blue"
+                        android:layout_marginEnd="8dp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="KONFIGURASI TERSIMPAN"
+                        android:textSize="11sp"
+                        android:textStyle="bold"
+                        android:letterSpacing="0.1"
+                        android:textColor="@color/brand_blue" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvCurrentConfigInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Belum Terhubung"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="?attr/colorOnSurface"
+                    android:layout_marginBottom="4dp" />
+
+                <TextView
+                    android:id="@+id/tvLastUpdate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Hubungkan ke Perangkat terlebih dahulu"
+                    android:textSize="12sp"
+                    android:textColor="?attr/colorOnSurfaceVariant" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ubah Konfigurasi"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/brand_blue"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Atur spesifikasi kabel terlebih dahulu untuk melakukan validasi."
+            android:textColor="?attr/colorOnSurfaceVariant"
+            android:textSize="12sp"
+            android:layout_marginBottom="15dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Panjang Kabel (Meter)"
+            android:textStyle="bold"
+            android:textColor="?attr/colorOnSurface"
+            android:textSize="14sp"
+            android:layout_marginBottom="8dp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inputLayoutLength"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Masukkan panjang (cth: 1.5)"
+            android:textColorHint="?attr/colorOnSurface"
+            app:boxStrokeColor="@color/selector_input_stroke"
+            app:hintTextColor="@color/brand_blue"
+            android:layout_marginBottom="12dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etLength"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:textColor="?attr/colorOnSurface"
+                android:text="1.0" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroupLength"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:singleSelection="true"
+            app:selectionRequired="false"
+            android:layout_marginBottom="15dp">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip1m"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1 Meter"
+                android:checked="true"
+                android:textColor="?attr/colorOnSurface"
+                app:chipStrokeColor="@color/selector_chip_stroke"
+                app:chipStrokeWidth="1dp"
+                app:chipBackgroundColor="@android:color/transparent" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip2m"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2 Meter"
+                android:textColor="?attr/colorOnSurface"
+                app:chipStrokeColor="@color/selector_chip_stroke"
+                app:chipStrokeWidth="1dp"
+                app:chipBackgroundColor="@android:color/transparent" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip3m"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3 Meter"
+                android:textColor="?attr/colorOnSurface"
+                app:chipStrokeColor="@color/selector_chip_stroke"
+                app:chipStrokeWidth="1dp"
+                app:chipBackgroundColor="@android:color/transparent" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip5m"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5 Meter"
+                android:textColor="?attr/colorOnSurface"
+                app:chipStrokeColor="@color/selector_chip_stroke"
+                app:chipStrokeWidth="1dp"
+                app:chipBackgroundColor="@android:color/transparent" />
+
+        </com.google.android.material.chip.ChipGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Standar Kabel"
+            android:textStyle="bold"
+            android:textColor="?attr/colorOnSurface"
+            android:textSize="14sp"
+            android:layout_marginBottom="8dp" />
+
+        <com.google.android.material.button.MaterialButtonToggleGroup
+            android:id="@+id/toggleStandard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:singleSelection="true"
+            app:selectionRequired="true"
+            app:checkedButton="@id/btnSni"
+            android:layout_marginBottom="15dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSni"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="SNI (mm²)"
+                android:textColor="@color/brand_blue"
+                app:strokeColor="@color/brand_blue"
+                app:backgroundTint="@color/selector_toggle_bg" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnAwg"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="AWG"
+                android:textColor="@color/brand_blue"
+                app:strokeColor="@color/brand_blue"
+                app:backgroundTint="@color/selector_toggle_bg" />
+
+        </com.google.android.material.button.MaterialButtonToggleGroup>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inputLayoutSize"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ukuran Kabel"
+            android:textColorHint="?attr/colorOnSurface"
+            app:boxStrokeColor="@color/selector_input_stroke"
+            app:hintTextColor="@color/brand_blue"
+            android:layout_marginBottom="20dp">
+
+            <AutoCompleteTextView
+                android:id="@+id/dropdownSize"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                android:text="0.75 mm²"
+                android:textColor="?attr/colorOnSurface" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- TAMBAHAN: BAGIAN TOLERANSI -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Toleransi Pengukuran"
+            android:textStyle="bold"
+            android:textColor="?attr/colorOnSurface"
+            android:textSize="14sp"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kompensasi hambatan suhu dan capit probe. Rekomendasi (Normal)."
+            android:textColor="?attr/colorOnSurfaceVariant"
+            android:textSize="12sp"
+            android:layout_marginBottom="8dp" />
+
+        <com.google.android.material.button.MaterialButtonToggleGroup
+            android:id="@+id/toggleTolerance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:singleSelection="true"
+            app:selectionRequired="true"
+            app:checkedButton="@id/btnTolNormal"
+            android:layout_marginBottom="20dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnTolKetat"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Ketat\n(+5%)"
+                android:textSize="11sp"
+                android:textColor="@color/brand_blue"
+                app:strokeColor="@color/brand_blue"
+                app:backgroundTint="@color/selector_toggle_bg" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnTolNormal"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Normal\n(+10%)"
+                android:textSize="11sp"
+                android:textColor="@color/brand_blue"
+                app:strokeColor="@color/brand_blue"
+                app:backgroundTint="@color/selector_toggle_bg" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnTolLonggar"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Longgar\n(+15%)"
+                android:textSize="11sp"
+                android:textColor="@color/brand_blue"
+                app:strokeColor="@color/brand_blue"
+                app:backgroundTint="@color/selector_toggle_bg" />
+
+        </com.google.android.material.button.MaterialButtonToggleGroup>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSaveConfig"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Simpan Konfigurasi"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            app:cornerRadius="12dp"
+            android:backgroundTint="@color/brand_blue" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

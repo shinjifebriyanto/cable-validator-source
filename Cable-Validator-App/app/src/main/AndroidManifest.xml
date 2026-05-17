@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- ========================================================= -->
+    <!-- 1. PERIZINAN UNTUK ANDROID 11 (API 30) KE BAWAH           -->
+    <!-- ========================================================= -->
+    <!-- Izin dasar untuk menggunakan dan mengelola Bluetooth -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
+    <!-- Izin lokasi diwajibkan oleh Android versi lama untuk dapat mendeteksi perangkat Bluetooth di sekitar -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <!-- ========================================================= -->
+    <!-- 2. PERIZINAN KHUSUS UNTUK ANDROID 12 (API 31) KE ATAS     -->
+    <!-- ========================================================= -->
+    <!-- Memisahkan izin memindai (Scan) dan menyambungkan (Connect) ke perangkat Bluetooth -->
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+
+    <!-- ========================================================= -->
+    <!-- 3. PERSYARATAN PERANGKAT KERAS (HARDWARE)                 -->
+    <!-- ========================================================= -->
+    <!-- Memastikan aplikasi hanya dapat diinstal pada perangkat yang memiliki chip Bluetooth Low Energy (BLE) -->
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="true" />
+
+    <!-- ========================================================= -->
+    <!-- 4. KONFIGURASI UTAMA APLIKASI                             -->
+    <!-- ========================================================= -->
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.CableValidator"
+        tools:targetApi="31">
+
+        <!-- WelcomeActivity: Ditetapkan sebagai layar pertama yang muncul saat aplikasi dibuka (Launcher).
+             Bertugas menangani proses onboarding dan permintaan izin (permissions). -->
+        <activity
+            android:name=".WelcomeActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- MainActivity: Layar utama aplikasi yang memuat navigasi antar-tab (Perangkat, Validasi, Riwayat, dll).
+             Status exported="false" berarti Activity ini tidak dapat dipanggil langsung dari aplikasi lain. -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+
+    </application>
+
+</manifest>
