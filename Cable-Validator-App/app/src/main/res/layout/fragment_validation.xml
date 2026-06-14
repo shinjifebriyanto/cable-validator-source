@@ -135,7 +135,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="(Ref: IACS 100%)"
+                    android:text="(Ref: Algoritma Validasi Kabel)"
                     android:gravity="end"
                     android:textSize="10sp"
                     android:layout_marginTop="2dp"

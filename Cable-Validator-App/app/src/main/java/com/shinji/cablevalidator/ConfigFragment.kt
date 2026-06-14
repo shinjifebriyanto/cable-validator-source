@@ -35,9 +35,9 @@ class ConfigFragment : Fragment() {
     // Tabel nilai resistansi dasar (Ohm per meter) untuk setiap kombinasi standar dan ukuran
     private val resistanceTable = mapOf(
         "SNI 0.5 mm²" to 0.0390, "SNI 0.75 mm²" to 0.0260, "SNI 1.0 mm²" to 0.0195,
-        "SNI 1.5 mm²" to 0.0133, "SNI 2.5 mm²" to 0.00798, "SNI 4.0 mm²" to 0.00495,
-        "SNI 6.0 mm²" to 0.00330, "AWG AWG 24" to 0.0842, "AWG AWG 22" to 0.0529,
-        "AWG AWG 20" to 0.0333, "AWG AWG 18" to 0.0210, "AWG AWG 16" to 0.0131,
+        "SNI 1.5 mm²" to 0.0133, "SNI 2.5 mm²" to 0.0079, "SNI 4.0 mm²" to 0.0049,
+        "SNI 6.0 mm²" to 0.0033, "AWG AWG 24" to 0.0841, "AWG AWG 22" to 0.0529,
+        "AWG AWG 20" to 0.0332, "AWG AWG 18" to 0.0209, "AWG AWG 16" to 0.0131,
         "AWG AWG 14" to 0.0082, "AWG AWG 12" to 0.0052, "AWG AWG 10" to 0.0032
     )
 
