@@ -4,7 +4,7 @@
 ![ESP32](https://img.shields.io/badge/ESP32-000000?style=for-the-badge&logo=espressif&logoColor=white)
 ![Bluetooth](https://img.shields.io/badge/Bluetooth_BLE-0082FC?style=for-the-badge&logo=bluetooth&logoColor=white)
 
-Proyek ini merupakan sistem integrasi instrumen penguji kualitas kabel hantaran listrik berbasis **Android** dan **Bluetooth Low Energy (BLE)**. Sistem ini dirancang untuk mengukur nilai resistansi konduktor kabel secara riil, lalu memvalidasinya secara otomatis berdasarkan standar referensi nasional dan internasional (**SNI** dan **ASTM AWG**).
+Proyek ini merupakan sistem integrasi instrumen penguji kualitas kabel hantaran listrik berbasis **Android** dan **Bluetooth Low Energy (BLE)**. Sistem ini dirancang untuk mengukur nilai resistansi konduktor kabel secara presisi, lalu memvalidasinya secara otomatis berdasarkan standar referensi nasional dan internasional (**SNI** dan **ASTM AWG**).
 
 ---
 
@@ -24,24 +24,25 @@ Proyek ini merupakan sistem integrasi instrumen penguji kualitas kabel hantaran 
 
 ## 📱 Perangkat Lunak: Aplikasi Android
 
-Aplikasi Android berfungsi sebagai *User Interface* (UI) utama untuk memantau proses pengujian, melakukan kalkulasi standar, dan menyimpan data hasil pengujian.
+Aplikasi Android berfungsi sebagai *User Interface* (UI) utama untuk memantau proses pengujian, melakukan kalkulasi standar, dan menyimpan data hasil pengujian tanpa harus terikat dengan layar pada instrumen fisik.
 
 ### ✨ Fitur Utama Aplikasi
-* **🔗 Perangkat (Pindai & Hubungkan):** Manajemen koneksi nirkabel menggunakan teknologi BLE untuk menghubungkan *smartphone* dengan instrumen keras secara hemat daya dan stabil.
-* **⚙️ Konfigurasi Parameter:** Modul pengaturan variabel pengujian yang fleksibel, meliputi penentuan standar acuan (SNI metrik / ASTM AWG), ukuran penampang, panjang kabel, dan persentase batas toleransi.
-* **📊 Validasi Real-time:** Menampilkan grafik pembacaan nilai resistansi secara langsung dan melakukan komparasi otomatis dengan ambang batas standar untuk menentukan status kelayakan (**LULUS** atau **GAGAL**).
-* **📂 Riwayat Pengujian:** Sistem pencatatan lokal (*local storage*) terintegrasi untuk menyimpan rekam jejak hasil pengujian lengkap dengan detail parameter kabel dan waktu pengujian.
+* **🔗 Perangkat (Pindai & Hubungkan):** Manajemen koneksi nirkabel menggunakan teknologi BLE. Memastikan transfer data hasil pembacaan sensor berlangsung cepat, stabil, dan sangat hemat daya.
+* **⚙️ Konfigurasi Parameter:** Modul pengaturan variabel pengujian yang fleksibel, meliputi penentuan standar acuan (SNI metrik / ASTM AWG), ukuran penampang, panjang kabel uji, dan persentase batas toleransi hambatan.
+* **📊 Validasi Real-time:** Menampilkan nilai resistansi kabel yang diuji secara langsung dan melakukan komparasi otomatis dengan ambang batas standar untuk menentukan status kelayakan (**LULUS** atau **GAGAL**).
+* **📂 Riwayat Pengujian:** Sistem pencatatan lokal (*local storage*) terintegrasi untuk menyimpan rekam jejak hasil pengujian, lengkap dengan detail parameter kabel dan waktu pengujian untuk keperluan audit atau pelaporan.
 
 ---
 
 ## 🛠️ Perangkat Keras: Instrumen & PCB
 
-Instrumen fisik dibangun menggunakan mikrokontroler sebagai pusat kendali data sensor dan rangkaian pengkondisi sinyal analog yang presisi.
+Instrumen fisik dibangun dengan mengimplementasikan metode pengukuran resistansi rendah yang mampu mengeliminasi galat ukur dari kabel *probe*, dikendalikan oleh mikrokontroler sebagai pusat pemrosesan nirkabel.
 
 ### 📐 Spesifikasi Teknis Hardware
-* **Mikrokontroler Utama:** ESP32 Series (Modul BLE Terintegrasi).
-* **Sirkuit Pengukur:** Rangkaian pembagi tegangan (*voltage divider*) presisi tinggi yang dikombinasikan dengan penguat operasional dan IC ADC eksternal untuk membaca nilai resistansi rendah.
-* **Sistem Daya:** Manajemen pengisian daya baterai terintegrasi menggunakan modul TP4056 dengan sirkuit *DC Step-Up*.
+* **Metode Pengukuran:** Menggunakan **Metode Kelvin 4-Wire (4-Terminal Sensing)**. Metode ini memisahkan jalur injeksi arus (*Force*) dan jalur pembacaan tegangan (*Sense*) untuk mengeliminasi resistansi dari kabel *probe* dan kontak konektor, sehingga hasil ukur murni hanya nilai resistansi kabel uji.
+* **Sirkuit Pengukur (Sensor):** Rangkaian menggunakan **LM317** sebagai sumber arus konstan (Constant Current Source) yang diinjeksikan ke kabel uji. Penurunan tegangan (*voltage drop*) kemudian dibaca secara presisi tinggi menggunakan IC eksternal **ADC 16-bit ADS1115**.
+* **Mikrokontroler Utama:** **ESP32-C3 Supermini**, bertugas mengolah data digital dari ADC dan mengirimkannya secara nirkabel via modul BLE terintegrasi.
+* **Sistem Daya:** Manajemen pengisian daya baterai terintegrasi menggunakan modul **TP4056** dengan sirkuit *DC Step-Up* untuk menjamin stabilitas suplai tegangan ke komponen pengukur.
 
 ---
 
@@ -57,11 +58,11 @@ Seksi ini menampilkan desain papan sirkuit cetak (*Printed Circuit Board*) yang 
   <tr>
     <td width="50%" align="center">
       <b>Tampak Atas (Top View)</b><br>
-      <i>Menunjukkan tata letak komponen utama (ESP32, IC, Connector)</i>
+      <i>Menunjukkan tata letak komponen pemrosesan (ESP32-C3, IC ADC) dan konektor Kelvin 4-Wire</i>
     </td>
     <td width="50%" align="center">
       <b>Tampak Bawah (Bottom View)</b><br>
-      <i>Menunjukkan jalur routing dan dudukan baterai 18650 terintegrasi</i>
+      <i>Menunjukkan jalur routing dan dudukan baterai 18650 terintegrasi untuk efisiensi ruang</i>
     </td>
   </tr>
   <tr>
@@ -74,7 +75,7 @@ Seksi ini menampilkan desain papan sirkuit cetak (*Printed Circuit Board*) yang 
   </tr>
 </table>
 
-**Deskripsi Singkat PCB:** Desain PCB ini mengoptimalkan ruang dengan menempatkan komponen pemrosesan (ESP32) dan sirkuit pengukur sensitif di lapisan atas, sementara lapisan bawah didominasi oleh dudukan baterai holder 18650 untuk keseimbangan berat dan efisiensi ruang boks alat.
+**Deskripsi Singkat PCB:** Desain PCB ini dirancang dengan memisahkan jalur tembaga untuk terminal *Force* (injeksi arus) dan *Sense* (pembacaan tegangan) agar sesuai dengan prinsip Kelvin 4-wire. Komponen sensitif ditempatkan di lapisan atas, sementara lapisan bawah didominasi oleh dudukan baterai 18650 untuk menyeimbangkan pusat gravitasi instrumen.
 
 #### 2. Diagram Skematik Sirkuit
 
@@ -84,7 +85,7 @@ Diagram skematik ini mengilustrasikan koneksi logis lengkap dari semua komponen 
   <img alt="Cable-Validator-Schematic" src="https://github.com/user-attachments/assets/21f80cfc-e7b3-42d4-9e74-b0ecda771b35" width="900">
 </p>
 
-**Deskripsi Singkat Skematik:** Diagram ini mencakup sub-sistem vital: manajemen daya (LM317 Adjustable Current Source & TP4056 Battery Charger), sirkuit sensing (Sense/Force connectors), pengolah data (ESP32-C3 Supermini), dan periferal pendukung (ADS1115 ADC, Buzzer, LED Indikator).
+**Deskripsi Singkat Skematik:** Diagram ini merepresentasikan arsitektur utama instrumen: LM317 diatur untuk memberikan arus konstan melewati terminal *Force*. Tegangan jatuh melintasi kabel uji dideteksi oleh terminal *Sense* dan dikonversi menjadi data digital beresolusi tinggi oleh ADS1115 (melalui jalur I2C). Data tersebut kemudian diproses oleh ESP32-C3 sebelum ditransmisikan. Diagram ini juga mencakup sub-sistem manajemen daya baterai lithium dan periferal *buzzer/LED* sebagai indikator status alat.
 
 #### 🔍 Pratinjau PCB Interaktif
 
